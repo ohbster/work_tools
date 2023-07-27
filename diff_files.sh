@@ -9,4 +9,4 @@ KEEP_ARRAY+=('diff_files.sh')
 > removefiles.txt
 
 #main loop
-for p in $(ls); do if [[ ! "${KEEP_ARRAY[*]} " =~ "$p" ]]; then echo "$p" >> removefiles.txt; fi done
+for p in $(ls); do if [[ ! "${KEEP_ARRAY[*]} " == "$p" ]]; then echo "$p" >> removefiles.txt; fi done
